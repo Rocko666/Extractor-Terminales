@@ -2,7 +2,6 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('latin1')
-#sys.setdefaultencoding('windows-1252')
 from pyspark.sql import SparkSession
 import pandas as pd
 from datetime import datetime

@@ -62,7 +62,7 @@ SELECT
 	, linea_negocio_homologado
 	, id_hash
 	, aplica_comision
-FROM db_desarrollo2021.otc_t_ext_terminales_ajst
+FROM db_reportes.otc_t_ext_terminales_ajst
     """
     print(qry)
     return qry
