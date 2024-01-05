@@ -135,7 +135,7 @@ SELECT
 	WHERE
 		p_fecha_factura >= ${val_fecha_ini}
 		AND p_fecha_factura < ${val_dia_uno}
-		AND clasificacion IN ('ACCESORIOS', 'TERMINALES')
+		AND clasificacion IN ('ACCESORIOS', 'TERMINALES','MODEM')
 		AND tipo_cargo = 'CARGO'
 		AND tipo_documento = 'NOTA DE CREDITO'
 		AND concat_ws('', SUBSTR(fecha_factura_relacionada, 1, 4)
@@ -267,7 +267,7 @@ END) AS tipo_doc_cliente
 	WHERE
 		a.p_fecha_factura >= ${val_fecha_ini}
 		AND a.p_fecha_factura<${val_dia_uno}
-		AND a.clasificacion IN ('ACCESORIOS', 'TERMINALES')
+		AND a.clasificacion IN ('ACCESORIOS', 'TERMINALES', 'MODEM')
 		AND a.tipo_cargo = 'CARGO'
 		AND a.tipo_documento <> 'NOTA DE CREDITO';
     
